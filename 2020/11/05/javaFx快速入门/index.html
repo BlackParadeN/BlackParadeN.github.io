@@ -20,28 +20,32 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="BlackParade">
-<meta property="og:url" content="http://example.com/index.html">
+  <meta name="description" content="入门什么是javaFx我粗略的认知就是：用来写桌面应用程序的，跟swing的定位差不多。 学习资源视频：https:&#x2F;&#x2F;www.bilibili.com&#x2F;video&#x2F;BV1fW41167RP 一个最简单的javaFx程序 继承Application 实现Application中的start方法 在main方法中调用launch()方法来启动start()方法 start()方法中传入参数Stage">
+<meta property="og:type" content="article">
+<meta property="og:title" content="javaFx快速入门">
+<meta property="og:url" content="http://example.com/2020/11/05/javaFx%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/index.html">
 <meta property="og:site_name" content="BlackParade">
+<meta property="og:description" content="入门什么是javaFx我粗略的认知就是：用来写桌面应用程序的，跟swing的定位差不多。 学习资源视频：https:&#x2F;&#x2F;www.bilibili.com&#x2F;video&#x2F;BV1fW41167RP 一个最简单的javaFx程序 继承Application 实现Application中的start方法 在main方法中调用launch()方法来启动start()方法 start()方法中传入参数Stage">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-11-05T13:18:36.000Z">
+<meta property="article:modified_time" content="2020-11-05T13:18:49.809Z">
 <meta property="article:author" content="BlackParade">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/">
+<link rel="canonical" href="http://example.com/2020/11/05/javaFx%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>BlackParade</title>
+  <title>javaFx快速入门 | BlackParade</title>
   
 
 
@@ -139,9 +143,10 @@
         <div class="content-wrap">
           
 
-          <div class="content index posts-expand">
+          <div class="content post posts-expand">
             
-      
+
+    
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
@@ -157,10 +162,9 @@
       <meta itemprop="name" content="BlackParade">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/11/05/javaFx%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/" class="post-title-link" itemprop="url">javaFx快速入门</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          javaFx快速入门
+        </h1>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -184,7 +188,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="入门"><a href="#入门" class="headerlink" title="入门"></a>入门</h1><h2 id="什么是javaFx"><a href="#什么是javaFx" class="headerlink" title="什么是javaFx"></a>什么是javaFx</h2><p>我粗略的认知就是：用来写桌面应用程序的，跟swing的定位差不多。</p>
+        <h1 id="入门"><a href="#入门" class="headerlink" title="入门"></a>入门</h1><h2 id="什么是javaFx"><a href="#什么是javaFx" class="headerlink" title="什么是javaFx"></a>什么是javaFx</h2><p>我粗略的认知就是：用来写桌面应用程序的，跟swing的定位差不多。</p>
 <h3 id="学习资源"><a href="#学习资源" class="headerlink" title="学习资源"></a>学习资源</h3><p>视频：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1fW41167RP">https://www.bilibili.com/video/BV1fW41167RP</a></p>
 <h2 id="一个最简单的javaFx程序"><a href="#一个最简单的javaFx程序" class="headerlink" title="一个最简单的javaFx程序"></a>一个最简单的javaFx程序</h2><ul>
 <li>继承Application</li>
@@ -334,21 +338,23 @@
 <h2 id="组合键"><a href="#组合键" class="headerlink" title="组合键"></a>组合键</h2><p>监听Ctrl + C</p>
 <p>这里的<code>KeyCombination.SHORTCUT_DOWN</code>在win中指Ctrl，在Mac中指Meta</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">KeyCombination kccb = <span class="keyword">new</span> KeyCodeCombination(KeyCode.C, KeyCombination.SHORTCUT_DOWN);</span><br><span class="line">scene.getAccelerators().put(kccb, <span class="keyword">new</span> Runnable() &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;aaaa&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-      
     </div>
 
     
     
     
+
       <footer class="post-footer">
-        <div class="post-eof"></div>
+
+        
+
+
+        
       </footer>
+    
   </article>
   
   
-  
-
-
   
 
 
@@ -401,6 +407,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%A5%E9%97%A8"><span class="nav-number">1.</span> <span class="nav-text">入门</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AFjavaFx"><span class="nav-number">1.1.</span> <span class="nav-text">什么是javaFx</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90"><span class="nav-number">1.1.1.</span> <span class="nav-text">学习资源</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E4%B8%AA%E6%9C%80%E7%AE%80%E5%8D%95%E7%9A%84javaFx%E7%A8%8B%E5%BA%8F"><span class="nav-number">1.2.</span> <span class="nav-text">一个最简单的javaFx程序</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F"><span class="nav-number">2.</span> <span class="nav-text">生命周期</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Stage%E7%AA%97%E5%8F%A3"><span class="nav-number">3.</span> <span class="nav-text">Stage窗口</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#API"><span class="nav-number">3.1.</span> <span class="nav-text">API</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AA%97%E5%8F%A3%E7%B1%BB%E5%9E%8B"><span class="nav-number">3.2.</span> <span class="nav-text">窗口类型</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B7%A5%E5%85%B7%E7%B1%BBPlatform"><span class="nav-number">4.</span> <span class="nav-text">工具类Platform</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Screen%E7%B1%BB"><span class="nav-number">5.</span> <span class="nav-text">Screen类</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Scene"><span class="nav-number">6.</span> <span class="nav-text">Scene</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%94%B9%E5%8F%98%E5%9C%A8scene%E4%B8%8A%E7%9A%84%E9%BC%A0%E6%A0%87%E6%A0%B7%E5%BC%8F"><span class="nav-number">6.1.</span> <span class="nav-text">改变在scene上的鼠标样式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%89%93%E5%BC%80%E4%B8%80%E4%B8%AA%E7%BD%91%E9%A1%B5"><span class="nav-number">6.2.</span> <span class="nav-text">打开一个网页</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Group"><span class="nav-number">7.</span> <span class="nav-text">Group</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%82%B9%E5%87%BB%E4%BA%8B%E4%BB%B6"><span class="nav-number">8.</span> <span class="nav-text">点击事件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%BC%A0%E6%A0%87%E7%82%B9%E5%87%BB%E4%BA%8B%E4%BB%B6"><span class="nav-number">9.</span> <span class="nav-text">鼠标点击事件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%95%E5%87%BB"><span class="nav-number">9.1.</span> <span class="nav-text">单击</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%8C%E5%87%BB"><span class="nav-number">9.2.</span> <span class="nav-text">双击</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%94%AE%E7%9B%98%E6%8C%89%E9%94%AE"><span class="nav-number">10.</span> <span class="nav-text">键盘按键</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%84%E5%90%88%E9%94%AE"><span class="nav-number">10.1.</span> <span class="nav-text">组合键</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
