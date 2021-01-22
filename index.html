@@ -1,618 +1,714 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="zh-CN">
+
+
 <head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.2.0">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
-
-<link rel="stylesheet" href="/css/main.css">
-
-
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
-
-<script id="hexo-configurations">
-    var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
-  </script>
-
-  <meta property="og:type" content="website">
-<meta property="og:title" content="BlackParade">
-<meta property="og:url" content="http://example.com/index.html">
-<meta property="og:site_name" content="BlackParade">
-<meta property="og:locale" content="zh_CN">
-<meta property="article:author" content="BlackParade">
-<meta name="twitter:card" content="summary">
-
-<link rel="canonical" href="http://example.com/">
+    <meta charset="utf-8">
+    <meta name="keywords" content="BlackParade">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome : true,
-    isPost : false,
-    lang   : 'zh-CN'
-  };
-</script>
+    <title>BlackParade</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
 
-  <title>BlackParade</title>
-  
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.2.0"></head>
 
 
 
 
-
-
-  <noscript>
-  <style>
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
-
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
-  }
-
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
-
-</head>
-
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
-
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="切换导航栏">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
-    </div>
-  </div>
-
-  <div class="site-meta">
-
-    <a href="/" class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">BlackParade</h1>
-      <span class="logo-line-after"><i></i></span>
-    </a>
-  </div>
-
-  <div class="site-nav-right">
-    <div class="toggle popup-trigger">
-    </div>
-  </div>
-</div>
-
-
-
-
-<nav class="site-nav">
-  <ul id="menu" class="main-menu menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
-
-  </li>
-  </ul>
-</nav>
-
-
-
-
-</div>
-    </header>
-
-    
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
-
-
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
-
-          <div class="content index posts-expand">
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">BlackParade</span>
+                </a>
+            </div>
             
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
       
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
   
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2020/11/05/%E6%A0%91%E8%8E%93%E6%B4%BE4%E7%9A%84%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/">
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="BlackParade">
-      <meta itemprop="description" content="">
-    </span>
 
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="BlackParade">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/11/05/%E6%A0%91%E8%8E%93%E6%B4%BE4%E7%9A%84%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/" class="post-title-link" itemprop="url">树莓派4的基础使用</a>
-        </h2>
+<div id="mobile-nav" class="side-nav sidenav">
 
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2020-11-05 23:35:12 / 修改时间：23:35:39" itemprop="dateCreated datePublished" datetime="2020-11-05T23:35:12+08:00">2020-11-05</time>
-            </span>
-
-          
-
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">BlackParade</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
         </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>树莓派，年轻人的第一台电脑，你值得拥有。</p>
-<p>树莓派目前型号已经到了4，还可根据自己的需求添加配件。</p>
-<h1 id="第一次开机"><a href="#第一次开机" class="headerlink" title="第一次开机"></a>第一次开机</h1><h2 id="烧系统"><a href="#烧系统" class="headerlink" title="烧系统"></a>烧系统</h2><p>要开机首先要有系统，先整系统，搞起。</p>
-<p>树莓派的载体是SD卡，推荐8g以上。电脑上，可以用读卡器读sd卡；网上有人说也可以用手机刷，没有试过。</p>
-<h3 id="所使用工具"><a href="#所使用工具" class="headerlink" title="所使用工具"></a>所使用工具</h3><ol>
-<li>SD Card Formatter <a target="_blank" rel="noopener" href="https://www.sdcard.org/downloads/formatter/eula_windows/index.html">下载地址</a></li>
-<li>Win32DiskImager <a target="_blank" rel="noopener" href="https://sourceforge.net/projects/win32diskimager/">下载地址</a></li>
-<li>Angry IP Scanner 或 Advanced IP Scanner</li>
-<li>xshell 或 putty</li>
-</ol>
-<h3 id="格式化SD卡"><a href="#格式化SD卡" class="headerlink" title="格式化SD卡"></a>格式化SD卡</h3><p>不推荐用windows自带的格式化，使用SD Card Formatter进行格式化。</p>
-<p><img src="https://img-blog.csdnimg.cn/20200711001935956.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0JsYWNrUGFyYWRl,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p>格式化好SD卡后，接着来准备系统镜像。</p>
-<h3 id="下载系统镜像"><a href="#下载系统镜像" class="headerlink" title="下载系统镜像"></a>下载系统镜像</h3><p>从官网下载系统镜像。官网：<a target="_blank" rel="noopener" href="https://www.raspberrypi.org/downloads/">https://www.raspberrypi.org/downloads/</a></p>
-<p><img src="https://img-blog.csdnimg.cn/2020071100193642.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0JsYWNrUGFyYWRl,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p>官网上也有说，Raspbian是一个类Linux系统，需要自己去安装镜像。noobs，菜鸟，下了解压就用。</p>
-<p>这里就选择Raspbian就完事了。</p>
-<p>如下图可以看到，有3中款式。分别是带图形桌面和推荐工具的、带图形界面的、不带图形界面的。</p>
-<p>选第一个就完事了，用迅雷可以满速。</p>
-<p><img src="https://img-blog.csdnimg.cn/20200711001935989.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0JsYWNrUGFyYWRl,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p>解压下载的压缩包，解压软件推荐使用7-zip。</p>
-<p>解压出来一个.img为后缀的镜像文件，接下来将这个镜像写入SD卡里。</p>
-<h3 id="写入系统镜像"><a href="#写入系统镜像" class="headerlink" title="写入系统镜像"></a>写入系统镜像</h3><p>使用Win32DiskImager写入镜像。</p>
-<p>选择路径后，点击写入。</p>
-<p><img src="https://img-blog.csdnimg.cn/20200711001935990.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0JsYWNrUGFyYWRl,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p>写入完成后，查看SD卡时，会出现下图所示弹窗。</p>
-<p>这里不予理会，点击取消。</p>
-<p><img src="https://img-blog.csdnimg.cn/20200711001935986.png" alt="在这里插入图片描述"></p>
-<h3 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h3><p>打开名为boot的启动区，在其根目录新建一个名为ssh的空文件（不带后缀）。这是因为现在的新树莓派系统默认不启动ssh。</p>
-<p>还可设置wifi的配置文件，在根目录新建名为 wpa_supplicant.conf 的文件，其内容为：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">country&#x3D;CN</span><br><span class="line">ctrl_interface&#x3D;DIR&#x3D;&#x2F;var&#x2F;run&#x2F;wpa_supplicant GROUP&#x3D;netdev</span><br><span class="line">update_config&#x3D;1</span><br><span class="line"></span><br><span class="line">network&#x3D;&#123;</span><br><span class="line">ssid&#x3D;&quot;WiFi-A&quot;</span><br><span class="line">psk&#x3D;&quot;12345678&quot;</span><br><span class="line">key_mgmt&#x3D;WPA-PSK</span><br><span class="line">priority&#x3D;1</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">network&#x3D;&#123;</span><br><span class="line">ssid&#x3D;&quot;WiFi-B&quot;</span><br><span class="line">psk&#x3D;&quot;12345678&quot;</span><br><span class="line">key_mgmt&#x3D;WPA-PSK</span><br><span class="line">priority&#x3D;2</span><br><span class="line">scan_ssid&#x3D;1</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>说明以及不同安全性的 WiFi 配置示例：<br>#ssid:网络的ssid<br>#psk:密码<br>#priority:连接优先级，数字越大优先级越高（不可以是负数）<br>#scan_ssid:连接隐藏WiFi时需要指定该值为1</p>
-<p>更多wifi方面配置：<a target="_blank" rel="noopener" href="https://blog.csdn.net/yaoyutian/article/details/78811681">https://blog.csdn.net/yaoyutian/article/details/78811681</a></p>
-<h2 id="开机"><a href="#开机" class="headerlink" title="开机"></a>开机</h2><p>现在，已经有了一个写好了系统的SD卡，插入SD卡、电源、网线、HDMI线等等。</p>
-<ul>
-<li><p>推荐使用官方电源线或者带开关的电源线，防止多次拔插损坏电源口。</p>
-</li>
-<li><p>网线一端插入路由器或交换机。</p>
-</li>
-</ul>
-<p><img src="https://img-blog.csdnimg.cn/20200711001936142.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0JsYWNrUGFyYWRl,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p>打开开关，SWITCH ON，红灯常亮。等等，绿灯呢？我的绿灯呢？</p>
-<p>如果显示屏上可以看到启动画面，那恭喜，可以愉快玩耍。</p>
-<p>如果显示屏毫无反应，请不要慌张，可以试试后文的问题处理方案。</p>
-<p>如果你没连显示器，可以看看网线口的灯是否常亮；或者你的wifi接入设备中，是否有raspberry开头的设备。</p>
-<p>如果跟我一样，官方的3.5英寸屏一片白光，也不要慌张，插显示屏试试或者直接先远程连接。白屏需要安装驱动，具体见后文。</p>
-<h2 id="远程连接"><a href="#远程连接" class="headerlink" title="远程连接"></a>远程连接</h2><h3 id="SSH"><a href="#SSH" class="headerlink" title="SSH"></a>SSH</h3><p>我使用的工具是xshell。</p>
-<p>要连树莓派，首先需要知道树莓派的IP，这里使用 Angry IP Scanner 扫描工具，如图所示。</p>
-<p><img src="https://img-blog.csdnimg.cn/2020071100193629.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0JsYWNrUGFyYWRl,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p>xshell新建连接，ip输入相应的ip地址，别名随便取，其他默认。</p>
-<p>连接后，默认用户名和密码为： pi 跟 raspberry </p>
-<h3 id="远程桌面"><a href="#远程桌面" class="headerlink" title="远程桌面"></a>远程桌面</h3><p>使用windows自带的远程桌面连接树莓派。</p>
-<p>首先需要在raspbian下安装一个sdrp服务：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install xrdp</span><br></pre></td></tr></table></figure>
-
-<p>启动 xrdp 服务:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo &#x2F;etc&#x2F;init.d&#x2F;xrdp restart</span><br></pre></td></tr></table></figure>
-
-<p>此时会启用相应端口，配置方面默认即可。<br>通过命令：netstat -tnl<br>查看 3350 3389 5910 这三个端口处于LISTEN，一般就没问题了。</p>
-<p>输入 mstsc 打开windows远程桌面工具，输入树莓派IP，冲冲冲！</p>
-<p>参考：<a target="_blank" rel="noopener" href="https://shumeipai.nxez.com/2013/10/06/windows-remote-desktop-connection-raspberry-pi.html">用Windows远程桌面连接树莓派的方法</a></p>
-<h3 id="VNC"><a href="#VNC" class="headerlink" title="VNC"></a>VNC</h3><p>使用VNC Viewer <a target="_blank" rel="noopener" href="https://www.realvnc.com/en/connect/download/viewer/">VNC Viewer下载</a></p>
-<ul>
-<li><p>图形界面下，Preferences –&gt; Raspberry Pi Configuration –&gt; Interfaces –&gt; 启动VNC</p>
-</li>
-<li><p>终端输入命令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo raspi-config</span><br></pre></td></tr></table></figure>
-
-<p>依次选择：Interfacing Options -&gt; VNC -&gt; Yes</p>
-</li>
-</ul>
-<p>修改分辨率</p>
-<p>终端下输入命令： sudo raspi-config</p>
-<p>依次选择：7 Advanced Options –&gt; A5 Resolution –&gt; 选择你屏幕对应的分辨率</p>
-<h3 id="固定IP"><a href="#固定IP" class="headerlink" title="固定IP"></a>固定IP</h3><p>打开终端，编辑vim /etc/dhcpcd.conf，在# Example static IP configuration 下面修改：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">interface eth0</span><br><span class="line">static ip_address&#x3D;192.168.0.229&#x2F;24</span><br><span class="line">#static ip6_address&#x3D;fd51:42f8:caae:d92e::ff&#x2F;64</span><br><span class="line">static routers&#x3D;192.168.0.1</span><br><span class="line">static domain_name_servers&#x3D;192.168.0.1 8.8.8.8 114.114.114.114</span><br></pre></td></tr></table></figure>
-
-<p>设置一下静态IP、静态路由和DNS服务器，根据实际设置，避免IP冲突即可，如我设置为192.168.0.229/24。</p>
-<p>参考链接：<a target="_blank" rel="noopener" href="https://blog.csdn.net/was172/article/details/106877321">树莓派 Raspberry Pi 3B+安装官方系统（一）</a></p>
-<h1 id="问题解决方案"><a href="#问题解决方案" class="headerlink" title="问题解决方案"></a>问题解决方案</h1><h2 id="树莓派4Recovery"><a href="#树莓派4Recovery" class="headerlink" title="树莓派4Recovery"></a>树莓派4Recovery</h2><p>官网首页就有树莓派4的修复方法：<a target="_blank" rel="noopener" href="https://www.raspberrypi.org/downloads/">https://www.raspberrypi.org/downloads/</a></p>
-<p><img src="https://img-blog.csdnimg.cn/2020071100193654.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0JsYWNrUGFyYWRl,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p>如果启动不了，有可能是EEPROM模块的问题。为了检查，先把sd卡拔出来，关闭电源之后再重新连接。如果绿灯不亮，就说明是EEPROM的问题。</p>
-<p>顺便一提，一般绿灯会闪四下，表示sd卡没插或者sd插槽有问题。</p>
-<p>为了修复，就去另找一张sd卡，根据不同系统下载以下的工具。</p>
-<ul>
-<li><a target="_blank" rel="noopener" href="https://downloads.raspberrypi.org/imager/imager.exe">Raspberry Pi Imager for Windows</a></li>
-<li><a target="_blank" rel="noopener" href="https://downloads.raspberrypi.org/imager/imager.dmg">Raspberry Pi Imager for macOS</a></li>
-<li><a target="_blank" rel="noopener" href="https://downloads.raspberrypi.org/imager/imager_amd64.deb">Raspberry Pi Imager for Ubuntu</a></li>
-</ul>
-<p>打开工具，CHOOSE OS –&gt; Misc utility images –&gt; Pi 4 EEPROM boot recovery，再选择sd卡，然后write。</p>
-<p>整好后插入，通电，看绿灯在疯狂闪就ok了。接着换烧好系统的sd卡插上去，通电。</p>
-<h2 id="解决官方3-5屏白屏"><a href="#解决官方3-5屏白屏" class="headerlink" title="解决官方3.5屏白屏"></a>解决官方3.5屏白屏</h2><p>因为要从git上拉项目，所以要保证网络的畅通。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo git clone https:&#x2F;&#x2F;github.com&#x2F;waveshare&#x2F;LCD-show.git</span><br><span class="line">cd LCD-show&#x2F;</span><br><span class="line">sudo .&#x2F;LCD35-show</span><br></pre></td></tr></table></figure>
-
-
-
-<p>参考链接：<a target="_blank" rel="noopener" href="https://www.lxx1.com/2457">树莓派3.5英寸屏幕安装显示驱动，解决白屏问题</a></p>
-
-      
     </div>
 
     
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2020/11/05/javaFx%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="BlackParade">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="BlackParade">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
           
-            <a href="/2020/11/05/javaFx%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/" class="post-title-link" itemprop="url">javaFx快速入门</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2020-11-05 21:18:36 / 修改时间：23:33:14" itemprop="dateCreated datePublished" datetime="2020-11-05T21:18:36+08:00">2020-11-05</time>
-            </span>
-
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
           
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
 
         </div>
-      </header>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/blinkfox/hexo-theme-matery" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
 
     
+<style>
+    .carousel-control {
+        width: 45px;
+        height: 45px;
+        line-height: 55px;
+        border-radius: 45px;
+        background: transparent;
+        cursor: pointer;
+        z-index: 100;
+    }
+
+    #prev-cover {
+        position: absolute;
+        top: 48%;
+        left: 8px;
+    }
+
+    #next-cover {
+        position: absolute;
+        top: 48%;
+        right: 8px;;
+    }
+
+    #prev-cover i {
+        margin-right: 3px;
+    }
+
+    #next-cover i {
+        margin-left: 3px;
+    }
+
+    .carousel-control:hover {
+        background-color: rgba(0, 0, 0, .4);
+    }
+
+    .carousel-control i {
+        color: #fff;
+        font-size: 2.4rem;
+    }
+</style>
+
+
+
+<div class="carousel carousel-slider center index-cover" data-indicators="true" style="margin-top: -64px;">
     
-    
-    <div class="post-body" itemprop="articleBody">
 
-      
-          <h1 id="入门"><a href="#入门" class="headerlink" title="入门"></a>入门</h1><h2 id="什么是javaFx"><a href="#什么是javaFx" class="headerlink" title="什么是javaFx"></a>什么是javaFx</h2><p>我粗略的认知就是：用来写桌面应用程序的，跟swing的定位差不多。</p>
-<h3 id="学习资源"><a href="#学习资源" class="headerlink" title="学习资源"></a>学习资源</h3><p>视频：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1fW41167RP">https://www.bilibili.com/video/BV1fW41167RP</a></p>
-<h2 id="一个最简单的javaFx程序"><a href="#一个最简单的javaFx程序" class="headerlink" title="一个最简单的javaFx程序"></a>一个最简单的javaFx程序</h2><ul>
-<li>继承Application</li>
-<li>实现Application中的start方法</li>
-<li>在main方法中调用launch()方法来启动start()方法</li>
-<li>start()方法中传入参数Stage</li>
-<li>Stage即为应用窗口，调用show()方法显示</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> javafx.stage.Stage;</span><br><span class="line"><span class="keyword">import</span> javafx.application.Application;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Hello</span> <span class="keyword">extends</span> <span class="title">Application</span> </span>&#123;</span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		System.out.println(<span class="string">&quot;hello world&quot;</span>);</span><br><span class="line">		</span><br><span class="line">		launch(args);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">start</span><span class="params">(Stage stage)</span> </span>&#123;</span><br><span class="line">		stage.show();</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
+    <div class="carousel-item red white-text bg-cover about-cover">
+        <div class="container">
+            <div class="row">
+    <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
+        <div class="brand">
+            <div class="title center-align">
+                
+                    subtitle
+                
+            </div>
 
-
-
-<h1 id="生命周期"><a href="#生命周期" class="headerlink" title="生命周期"></a>生命周期</h1><ul>
-<li>先运行init方法初始化，在运行start方法 -&gt; 窗口显示</li>
-<li>窗口关闭 -&gt; 调用stop方法</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> <span class="keyword">extends</span> <span class="title">Application</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        launch(args);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">init</span><span class="params">()</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;init&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">start</span><span class="params">(Stage primaryStage)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;start&quot;</span>);</span><br><span class="line">        primaryStage.show();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">stop</span><span class="params">()</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;stop&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h1 id="Stage窗口"><a href="#Stage窗口" class="headerlink" title="Stage窗口"></a>Stage窗口</h1><h2 id="API"><a href="#API" class="headerlink" title="API"></a>API</h2><ul>
-<li><p>设置标题：<code>setTitle()</code></p>
-</li>
-<li><p>设置左上角图标：<code>getIcons().add(new Image(&quot;url&quot;))</code></p>
-</li>
-<li><p>设置窗口最大化：<code>setMaximized(true)</code></p>
-</li>
-<li><p>设置窗口最小化：<code>setIconified(true)</code></p>
-</li>
-<li><p>关闭窗口：<code>close()</code></p>
-</li>
-<li><p>设置不可拉伸：<code>setResizable(false)</code></p>
-</li>
-<li><p>设置宽高：<code>setWidth(500)</code>、<code>setHeight(500)</code></p>
-</li>
-<li><p>设置最大最小宽高：<code>setMaxHeight()</code>、<code>setMinHeight()</code></p>
-</li>
-<li><p>获取宽高：<code>getWidth</code>、<code>getHeight</code></p>
-<ul>
-<li><p>如果之前没有设置宽高，还想要获取。需要在show()后获取</p>
-</li>
-<li><p>动态获取宽高（使用监听器）</p>
-<p>使用这个方法，可以在拉伸的时候获取当前窗口的宽高，能作为自适应布局的一种方案。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">primaryStage.heightProperty().addListener(<span class="keyword">new</span> ChangeListener&lt;Number&gt;() &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">changed</span><span class="params">(ObservableValue&lt;? extends Number&gt; observable, Number oldValue, Number newValue)</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;当前高度 = &quot;</span> + newValue.doubleValue());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">primaryStage.widthProperty().addListener(<span class="keyword">new</span> ChangeListener&lt;Number&gt;() &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">changed</span><span class="params">(ObservableValue&lt;? extends Number&gt; observable, Number oldValue, Number newValue)</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;当前宽度 = &quot;</span> + newValue.doubleValue());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p>设置全屏</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">primaryStage.setFullScreen(<span class="keyword">true</span>);</span><br><span class="line">primaryStage.setScene(<span class="keyword">new</span> Scene(<span class="keyword">new</span> Group())); <span class="comment">// 此行代码后续展开讲</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>设置透明度：<code>setOpacity(0.5)</code> （0：完全透明）</p>
-</li>
-<li><p>设置窗口置顶：<code>setAlwaysOnTop(true)</code></p>
-</li>
-<li><p>设置窗口在屏幕位置：<code>setX(500)</code>、<code>setY(500)</code></p>
-</li>
-</ul>
-<h2 id="窗口类型"><a href="#窗口类型" class="headerlink" title="窗口类型"></a>窗口类型</h2><p>5种窗口类型</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 默认</span></span><br><span class="line">stage.initStyle(StageStyle.DECORATED);</span><br><span class="line"><span class="comment">// 设置stage无任何装饰</span></span><br><span class="line">stage.initStyle(StageStyle.UNDECORATED);</span><br><span class="line"><span class="comment">// 设置stage背景透明</span></span><br><span class="line">stage.initStyle(StageStyle.TRANSPARENT);</span><br><span class="line"><span class="comment">// 设置stage白色背景</span></span><br><span class="line">stage.initStyle(StageStyle.UNIFIED);</span><br><span class="line"><span class="comment">// 设置stage只有一个关闭按钮</span></span><br><span class="line">stage.initStyle(StageStyle.UTILITY);</span><br></pre></td></tr></table></figure>
-
-
-
-<p>模态窗口</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">stage.initModality(Modality.APPLICATION_MODAL);</span><br><span class="line"></span><br><span class="line"><span class="comment">// WINDOW_MODAL模式</span></span><br><span class="line"><span class="comment">// 是两个窗口之间，有一个拥有关系，才会生效</span></span><br><span class="line">Stage s1 = <span class="keyword">new</span> Stage();</span><br><span class="line">Stage s2 = <span class="keyword">new</span> Stage();</span><br><span class="line">s2.initOwner(s1);</span><br><span class="line">s2.initModality(Modality.WINDOW_MODAL);</span><br></pre></td></tr></table></figure>
-
-
-
-<h1 id="工具类Platform"><a href="#工具类Platform" class="headerlink" title="工具类Platform"></a>工具类Platform</h1><p><strong>Platform.exit()</strong></p>
-<p>退出。关闭所有窗口</p>
-<p><strong>Platform.runLater()</strong></p>
-<p>如果您需要从非GUI线程更新GUI组件，您可以使用它将您的更新放在队列中，并且它将由GUI线程（并未重新开一个线程，还是start的javaFx Application Thread线程）尽快处理。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Platform.runLater(<span class="keyword">new</span> Runnable() &#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 执行操作，一般用来更新UI界面</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-
-
-<p><strong>Platform.setImplicitExit()</strong></p>
-<p>设置<code>Platform.setImplicitExit(false)</code>后，所有窗口都关闭了，程序也不会关闭。调用<code>Platform.exit()</code>之后，程序才会关闭。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Platform.setImplicitExit(<span class="keyword">false</span>);</span><br><span class="line">primaryStage.show();</span><br><span class="line">Platform.exit();</span><br></pre></td></tr></table></figure>
-
-
-
-<p><strong>Platform.isSupported()</strong></p>
-<p>判断电脑是否支持某种特性</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 电脑是否支持3d</span></span><br><span class="line">Platform.isSupported(ConditionalFeature.SCENE3D);</span><br></pre></td></tr></table></figure>
-
-
-
-<h1 id="Screen类"><a href="#Screen类" class="headerlink" title="Screen类"></a>Screen类</h1><p>获取当前屏幕信息</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Screen screen = Screen.getPrimary();</span><br><span class="line">Rectangle2D rt = screen.getBounds(); <span class="comment">// 屏幕大小</span></span><br><span class="line">Rectangle2D rt2 = screen.getVisualBounds(); <span class="comment">// 用户可以看到的屏幕</span></span><br><span class="line"></span><br><span class="line">System.out.println(<span class="string">&quot;左上x：&quot;</span>+ rt.getMinX() +<span class="string">&quot;左上y：&quot;</span> + rt.getMinY());</span><br><span class="line">System.out.println(<span class="string">&quot;右下x：&quot;</span>+rt.getMaxX()+<span class="string">&quot;右下y：&quot;</span> + rt.getMaxY());</span><br><span class="line">System.out.println(<span class="string">&quot;宽：&quot;</span>+rt.getWidth()+<span class="string">&quot;高：&quot;</span> + rt.getHeight());</span><br><span class="line">System.out.println(screen.getDpi()); <span class="comment">// 获取DPI</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h1 id="Scene"><a href="#Scene" class="headerlink" title="Scene"></a>Scene</h1><p>Scene放在Stage上面，Node放在Scene上面。</p>
-<p>Scene在初始化时，需要给构造参数传一个根节点。</p>
-<p>一般根节点是一个布局类。这里可以使用Group类</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Group group = <span class="keyword">new</span> Group();</span><br><span class="line">Button button = <span class="keyword">new</span> Button(<span class="string">&quot;按钮&quot;</span>);</span><br><span class="line">group.getChildren().add(button);</span><br><span class="line">Scene scene = <span class="keyword">new</span> Scene(group);</span><br><span class="line">primaryStage.setScene(scene);</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="改变在scene上的鼠标样式"><a href="#改变在scene上的鼠标样式" class="headerlink" title="改变在scene上的鼠标样式"></a>改变在scene上的鼠标样式</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 手</span></span><br><span class="line">scene.setCursor(Cursor.HAND);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 自定义样式</span></span><br><span class="line">URL url = getClass().getClassLoader().getResource(<span class="string">&quot;logo.png&quot;</span>);</span><br><span class="line">String path = url.toExternalForm();</span><br><span class="line"></span><br><span class="line">scene.setCursor(Cursor.cursor(path));</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="打开一个网页"><a href="#打开一个网页" class="headerlink" title="打开一个网页"></a>打开一个网页</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">HostServices host = getHostServices();</span><br><span class="line">host.showDocument(<span class="string">&quot;www.baidu.com&quot;</span>);</span><br></pre></td></tr></table></figure>
-
-
-
-<h1 id="Group"><a href="#Group" class="headerlink" title="Group"></a>Group</h1><p>我们先初始化三个Button：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Button b1 = <span class="keyword">new</span> Button(<span class="string">&quot;按钮1&quot;</span>);</span><br><span class="line">Button b2 = <span class="keyword">new</span> Button(<span class="string">&quot;按钮2&quot;</span>);</span><br><span class="line">Button b3 = <span class="keyword">new</span> Button(<span class="string">&quot;按钮3&quot;</span>);</span><br></pre></td></tr></table></figure>
-
-
-
-<p>然后将他们添加到group中，这里有两种方式：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1</span></span><br><span class="line">group.getChildren().add(b1);</span><br><span class="line">group.getChildren().add(b2);</span><br><span class="line">group.getChildren().add(b3);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 2</span></span><br><span class="line">group.getChildren().addAll(b1,b2,b3);</span><br></pre></td></tr></table></figure>
-
-<p>如果这是你运行，会发现只显示按钮3，按钮1和按钮2被覆盖了，那么如何显示呢？</p>
-<p>可分别设置每个按钮的位置：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">b1.setLayoutX(<span class="number">100</span>);</span><br><span class="line">b1.setLayoutY(<span class="number">0</span>);</span><br></pre></td></tr></table></figure>
-
-
-
-<p>因为<code>group.getChildren()</code>获取的是一个List，所以也可以对这个List进行操作。</p>
-<p>比如删除按钮1：<code>group.getChildren().remove(0)</code>，全部删除：<code>group.getChildren().clear()</code></p>
-<h1 id="点击事件"><a href="#点击事件" class="headerlink" title="点击事件"></a>点击事件</h1><p>这里写了一个点击按钮1，触发事件，增加子组件。</p>
-<p>group设置监听器，每次子组件增加触发。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">b1.setOnAction(<span class="keyword">new</span> EventHandler&lt;ActionEvent&gt;() &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">handle</span><span class="params">(ActionEvent event)</span> </span>&#123;</span><br><span class="line">        Button button = (Button) event.getSource(); <span class="comment">// event.getSource()获取的是Object对象</span></span><br><span class="line">        Button b4 = <span class="keyword">new</span> Button(<span class="string">&quot;b4&quot;</span>);</span><br><span class="line">        group.getChildren().add(b4);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">group.getChildren().addListener(<span class="keyword">new</span> ListChangeListener&lt;Node&gt;() &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onChanged</span><span class="params">(Change&lt;? extends Node&gt; c)</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;当前子组件数量：&quot;</span> + c.getList().size());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-
-
-<h1 id="鼠标点击事件"><a href="#鼠标点击事件" class="headerlink" title="鼠标点击事件"></a>鼠标点击事件</h1><h2 id="单击"><a href="#单击" class="headerlink" title="单击"></a>单击</h2><p>注意这里的<code>MouseEvent</code>别导错包了。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> javafx.scene.input.MouseEvent;</span><br><span class="line"></span><br><span class="line">b1.addEventHandler(MouseEvent.MOUSE_CLICKED, <span class="keyword">new</span> EventHandler&lt;MouseEvent&gt;() &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">handle</span><span class="params">(MouseEvent event)</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;鼠标单击事件&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="双击"><a href="#双击" class="headerlink" title="双击"></a>双击</h2><p>很简单，判断点击次数为2就行。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> javafx.scene.input.MouseEvent;</span><br><span class="line"></span><br><span class="line">b1.addEventHandler(MouseEvent.MOUSE_CLICKED, <span class="keyword">new</span> EventHandler&lt;MouseEvent&gt;() &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">handle</span><span class="params">(MouseEvent event)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (event.getClickCount() == <span class="number">2</span>) &#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;双击事件&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-<p>不过这里的点击判定很宽松，点击左键右键和中键都行。</p>
-<p>那么怎样只判断左键双击呢？只需要修改if条件就行。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">...</span><br><span class="line"><span class="keyword">if</span> (event.getClickCount() == <span class="number">2</span> &amp;&amp; event.getButton().name().equals(MouseButton.PRIMARY.name()) &#123;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
-
-<p>鼠标左键：<code>MouseButton.PRIMARY</code><br>鼠标右键：<code>MouseButton.SECONDARY</code><br>鼠标中键：<code>MouseButton.MIDDLE</code></p>
-<h1 id="键盘按键"><a href="#键盘按键" class="headerlink" title="键盘按键"></a>键盘按键</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 按下</span></span><br><span class="line">b1.setOnKeyPressed(<span class="keyword">new</span> EventHandler&lt;KeyEvent&gt;() &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">handle</span><span class="params">(KeyEvent event)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 判断按键是否为A</span></span><br><span class="line">        <span class="keyword">if</span> (event.getCode().getName().equals(KeyCode.A.getName())) &#123;</span><br><span class="line">            System.out.println(event.getCode().getName());</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 释放</span></span><br><span class="line">b1.setOnKeyReleased(<span class="keyword">new</span> EventHandler&lt;KeyEvent&gt;() &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">handle</span><span class="params">(KeyEvent event)</span> </span>&#123;</span><br><span class="line">        System.out.println(event.getCode().getName());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="组合键"><a href="#组合键" class="headerlink" title="组合键"></a>组合键</h2><p>监听Ctrl + C</p>
-<p>这里的<code>KeyCombination.SHORTCUT_DOWN</code>在win中指Ctrl，在Mac中指Meta</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">KeyCombination kccb = <span class="keyword">new</span> KeyCodeCombination(KeyCode.C, KeyCombination.SHORTCUT_DOWN);</span><br><span class="line">scene.getAccelerators().put(kccb, <span class="keyword">new</span> Runnable() &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;aaaa&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-      
+            <div class="description center-align">
+                
+                <span id="subtitle"></span>
+                <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+                <script>
+                    var typed = new Typed("#subtitle", {
+                        strings: [ 
+                            
+                                "从来没有真正的绝境, 只有心灵的迷途",
+                            
+                                "Never really desperate, only the lost of the soul",
+                            
+                        ],
+                        startDelay: 300,
+                        typeSpeed: 100,
+                        loop: true,
+                        backSpeed: 50,
+                        showCursor: true
+                    });
+                </script>
+                
+            </div>
+        </div>
     </div>
+</div>
 
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-
-  
-
-
-
-          </div>
-          
 
 <script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
-    }
-    if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
-      }
-    }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
-  }
+    // 每天切换 banner 图.  Switch banner image every day.
+    var bannerUrl = "/medias/banner/" + new Date().getDay() + '.jpg';
+    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
 </script>
 
+
+
+            <div class="cover-btns">
+                <a href="#indexCard" class="waves-effect waves-light btn">
+                    <i class="fa fa-angle-double-down"></i>开始阅读
+                </a>
+
+                
+                    <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light btn" target="_blank">
+                        <i class="fab fa-github-alt"></i>Github
+                    </a>
+                
+            </div>
+            <div class="cover-social-link">
+    <a href="https://github.com/blinkfox" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:1181062873@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1181062873" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1181062873" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
         </div>
-          
-  
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
-
-  <aside class="sidebar">
-    <div class="sidebar-inner">
-
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          文章目录
-        </li>
-        <li class="sidebar-nav-overview">
-          站点概览
-        </li>
-      </ul>
-
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-      </div>
-      <!--/noindex-->
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <p class="site-author-name" itemprop="name">BlackParade</p>
-  <div class="site-description" itemprop="description"></div>
-</div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
-          <span class="site-state-item-count">2</span>
-          <span class="site-state-item-name">日志</span>
-        </a>
-      </div>
-      <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">2</span>
-        <span class="site-state-item-name">标签</span>
-      </div>
-  </nav>
-</div>
-
-
-
-      </div>
-
     </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
 
-
-      </div>
-    </main>
-
-    <footer class="footer">
-      <div class="footer-inner">
-        
-
-        
-
-<div class="copyright">
-  
-  &copy; 
-  <span itemprop="copyrightYear">2020</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">BlackParade</span>
+    
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
-  </div>
 
+<script>
+    $(function () {
+        let coverSlider = $('.carousel');
+
+        //用户触摸轮播自动 restartPlay 是否生效
+        let initUserPressedOrDraggedActive = false
+
+        //用户触摸轮播自动 restartPlay
+        function initUserPressedOrDragged(instance) {
+            setInterval(() => {
+                if (instance.pressed || instance.dragged) {
+                    // console.log('initUserPressedOrDragged: ',instance.pressed,instance.dragged)
+                    restartPlay()
+                }
+            }, 1000)
+        }
+
+        coverSlider.carousel({
+            duration: Number('120'),
+            fullWidth: true,
+            indicators: 'true' === 'true',
+            onCycleTo() {
+                if (!initUserPressedOrDraggedActive) {
+                    // console.log('initUserPressedOrDraggedActive')
+                    initUserPressedOrDragged(this)
+                    initUserPressedOrDraggedActive = true
+                }
+            },
+        })
+
+        let carouselIntervalId;
+        
+        // Loop to call the next cover article picture.
+        let autoCarousel = function () {
+            carouselIntervalId = setInterval(function () {
+                coverSlider.carousel('next');
+            }, 5000);
+        };
+        autoCarousel();
         
 
+        function restartPlay() {
+            
+            clearInterval(carouselIntervalId);
+            autoCarousel();
+            
+        };
+
+        
+        // prev and next cover post.
+        $('#prev-cover').click(function () {
+            coverSlider.carousel('prev');
+            restartPlay();
+        });
+        $('#next-cover').click(function () {
+            coverSlider.carousel('next');
+            restartPlay();
+        });
+        
+    });
+</script>
+
+
+
+<main class="content">
+
+    
+    <div id="indexCard" class="index-card">
+        <div class="container ">
+            <div class="card">
+                <div class="card-content">
+                    
+                        <div class="dream">
+    
+    <div class="title center-align">
+        <i class="far fa-lightbulb"></i>&nbsp;&nbsp;我的梦想
+    </div>
+    
+    <div class="row">
+        <div class="col l8 offset-l2 m10 offset-m1 s10 offset-s1 center-align text">
+            不是每个人都应该像我这样去建造一座水晶大教堂，但是每个人都应该拥有自己的梦想，设计自己的梦想，追求自己的梦想，实现自己的梦想。梦想是生命的灵魂，是心灵的灯塔，是引导人走向成功的信仰。有了崇高的梦想，只要矢志不渝地追求，梦想就会成为现实，奋斗就会变成壮举，生命就会创造奇迹。——罗伯·舒乐
+        </div>
+    </div>
+</div>
+
+                    
+
+                    
+
+                    
+
+                    
+                    <div id="recommend-sections" class="recommend">
+                        
+
+
+
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    
+
+    <!-- 所有文章卡片 -->
+    <article id="articles" class="container articles">
+        <div class="row article-row">
+            
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2020/11/05/javaFx%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="javaFx快速入门">
+                            
+                            <span class="card-title">javaFx快速入门</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                入门什么是javaFx我粗略的认知就是：用来写桌面应用程序的，跟swing的定位差不多。
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-11-05
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-user fa-fw"></i>
+                                BlackParade
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/javaFX/">
+                            <span class="chip bg-color">javaFX</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </div>
+    </article>
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="503838841"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+    
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2019-2021</span>
+            
+            <span id="year">2019</span>
+            <a href="/about" target="_blank">BlackParade</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/blinkfox" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:1181062873@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
 
 
 
@@ -620,29 +716,9 @@
 
 
 
-      </div>
-    </footer>
-  </div>
-
-  
-  <script src="/lib/anime.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
-
-<script src="/js/utils.js"></script>
-
-<script src="/js/motion.js"></script>
-
-
-<script src="/js/schemes/muse.js"></script>
-
-
-<script src="/js/next-boot.js"></script>
-
-
-
-
-  
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1181062873" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1181062873" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
 
 
 
@@ -650,17 +726,177 @@
 
 
 
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
 
 
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
 
 
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
 
+    <!-- Baidu Analytics -->
 
+    <!-- Baidu Push -->
 
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
 
-  
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
 
-  
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
 
 </body>
+
 </html>
