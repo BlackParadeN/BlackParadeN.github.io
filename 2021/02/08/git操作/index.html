@@ -20,28 +20,32 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="BlackParade">
-<meta property="og:url" content="http://example.com/index.html">
+  <meta name="description" content="记录一下 git 的使用方法，和一些使用git遇到问题的解决方案。 学习资源Pro Git Git使用教程,最详细，最傻瓜，最浅显，真正手把手教 一个交互的学习网站：https:&#x2F;&#x2F;try.github.io&#x2F; 提交给远程库一个流程查看文件状态： git status git add xx名字或通配符 全部添加：git add -A  提交到分支： git commit 远程库添加： git re">
+<meta property="og:type" content="article">
+<meta property="og:title" content="git操作">
+<meta property="og:url" content="http://example.com/2021/02/08/git%E6%93%8D%E4%BD%9C/index.html">
 <meta property="og:site_name" content="BlackParade">
+<meta property="og:description" content="记录一下 git 的使用方法，和一些使用git遇到问题的解决方案。 学习资源Pro Git Git使用教程,最详细，最傻瓜，最浅显，真正手把手教 一个交互的学习网站：https:&#x2F;&#x2F;try.github.io&#x2F; 提交给远程库一个流程查看文件状态： git status git add xx名字或通配符 全部添加：git add -A  提交到分支： git commit 远程库添加： git re">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-02-08T06:47:57.000Z">
+<meta property="article:modified_time" content="2021-02-08T06:49:05.612Z">
 <meta property="article:author" content="BlackParade">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/">
+<link rel="canonical" href="http://example.com/2021/02/08/git%E6%93%8D%E4%BD%9C/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>BlackParade</title>
+  <title>git操作 | BlackParade</title>
   
 
 
@@ -181,9 +185,10 @@
         <div class="content-wrap">
           
 
-          <div class="content index posts-expand">
+          <div class="content post posts-expand">
             
-      
+
+    
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
@@ -199,10 +204,9 @@
       <meta itemprop="name" content="BlackParade">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/02/08/git%E6%93%8D%E4%BD%9C/" class="post-title-link" itemprop="url">git操作</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          git操作
+        </h1>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -226,7 +230,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>记录一下 git 的使用方法，和一些使用git遇到问题的解决方案。</p>
+        <p>记录一下 git 的使用方法，和一些使用git遇到问题的解决方案。</p>
 <h1 id="学习资源"><a href="#学习资源" class="headerlink" title="学习资源"></a>学习资源</h1><p><a target="_blank" rel="noopener" href="https://www.progit.cn/">Pro Git</a></p>
 <p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/30044692">Git使用教程,最详细，最傻瓜，最浅显，真正手把手教</a></p>
 <p>一个交互的学习网站：<a target="_blank" rel="noopener" href="https://try.github.io/">https://try.github.io/</a></p>
@@ -289,99 +293,37 @@
 
 <p>查看现有的远程库地址</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote get-url --all origin</span><br></pre></td></tr></table></figure>
-      
     </div>
 
     
     
     
+
       <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2020/11/05/javaFx%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="BlackParade">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="BlackParade">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/11/05/javaFx%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/" class="post-title-link" itemprop="url">javaFx快速入门</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-11-05 21:18:36" itemprop="dateCreated datePublished" datetime="2020-11-05T21:18:36+08:00">2020-11-05</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-11-06 15:18:17" itemprop="dateModified" datetime="2020-11-06T15:18:17+08:00">2020-11-06</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="入门"><a href="#入门" class="headerlink" title="入门"></a>入门</h1><h2 id="什么是javaFx"><a href="#什么是javaFx" class="headerlink" title="什么是javaFx"></a>什么是javaFx</h2><p>我粗略的认知就是：用来写桌面应用程序的，跟swing的定位差不多。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/11/05/javaFx%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
         
-      
-    </div>
 
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/11/05/javaFx%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/" rel="prev" title="javaFx快速入门">
+      <i class="fa fa-chevron-left"></i> javaFx快速入门
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
       </footer>
+    
   </article>
   
   
-  
-
-
   
 
 
 
           </div>
           
+    <div class="comments" id="gitalk-container"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -428,6 +370,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90"><span class="nav-number">1.</span> <span class="nav-text">学习资源</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%8F%90%E4%BA%A4%E7%BB%99%E8%BF%9C%E7%A8%8B%E5%BA%93%E4%B8%80%E4%B8%AA%E6%B5%81%E7%A8%8B"><span class="nav-number">2.</span> <span class="nav-text">提交给远程库一个流程</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#github%E7%AE%A1%E7%90%86%EF%BC%88%E5%88%A0%E9%99%A4%E5%8E%86%E5%8F%B2%E8%AE%B0%E5%BD%95%EF%BC%8C%E4%BF%9D%E7%95%99%E6%9C%80%E6%96%B0%E4%B8%80%E6%AC%A1%E7%89%88%E6%9C%AC%EF%BC%89"><span class="nav-number">3.</span> <span class="nav-text">github管理（删除历史记录，保留最新一次版本）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%87%8D%E6%96%B0%E7%99%BB%E5%BD%95"><span class="nav-number">4.</span> <span class="nav-text">重新登录</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9%E5%90%8D%E5%AD%97%E5%92%8Cemail"><span class="nav-number">5.</span> <span class="nav-text">修改名字和email</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#npm-run-lint-ts-found-some-errors-Please-fix-them-and-try-committing-again"><span class="nav-number">6.</span> <span class="nav-text">npm run lint:ts found some errors. Please fix them and try committing again.</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#vscode-%E7%94%A8git-%E6%8B%89%E5%8F%96%E4%BB%A3%E7%A0%81%EF%BC%8C%E6%8F%90%E7%A4%BA%EF%BC%9A%E5%9C%A8%E7%AD%BE%E5%87%BA%E5%89%8D%EF%BC%8C%E8%AF%B7%E6%B8%85%E7%90%86%E5%AD%98%E5%82%A8%E5%BA%93%E5%B7%A5%E4%BD%9C%E6%A0%91"><span class="nav-number">7.</span> <span class="nav-text">vscode 用git 拉取代码，提示：在签出前，请清理存储库工作树</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#git%E6%9B%B4%E6%94%B9%E5%AF%86%E7%A0%81%E4%B9%8B%E5%90%8E%E6%9C%AC%E5%9C%B0%E4%B8%8D%E8%83%BDclone%E4%BB%A3%E7%A0%81%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3"><span class="nav-number">8.</span> <span class="nav-text">git更改密码之后本地不能clone代码问题解决</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9C%A8%E4%B8%80%E4%B8%AA%E7%94%B5%E8%84%91%E4%B8%8A%E6%B7%BB%E5%8A%A0%E5%A4%9A%E4%B8%AA%E4%B8%8D%E5%90%8C%E8%B4%A6%E6%88%B7%E7%9A%84SSH-keys"><span class="nav-number">9.</span> <span class="nav-text">在一个电脑上添加多个不同账户的SSH keys</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9%E8%BF%9C%E7%A8%8B%E5%BA%93%E5%9C%B0%E5%9D%80"><span class="nav-number">10.</span> <span class="nav-text">修改远程库地址</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -547,6 +490,25 @@
 
   
 
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : 'e2f9136040f82cc4dbdc',
+      clientSecret: 'ed8620d58c0e233478009b6a65c6b1835d59b74f',
+      repo        : 'blog-comments',
+      owner       : 'BlackParadeN',
+      admin       : ['BlackParadeN'],
+      id          : '4926b2f9df67dc4a5be0a275ee7186ce',
+        language: 'zh-CN',
+      distractionFreeMode: true
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script>
 
 </body>
 </html>
